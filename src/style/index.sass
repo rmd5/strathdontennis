@@ -1,0 +1,29 @@
+@import "./_variables"
+
+html
+    overflow-x: hidden
+
+    body
+        background-color: $white
+        background-image: url("../img/court.jpg")
+        background-repeat: no-repeat
+        background-size: 100% auto
+        width: 100%
+        margin: 0px
+
+        .App
+            position: relative
+            min-height: 100vh
+
+            @import "./court/_court"
+            @import "./heading/_heading"
+            @import "./booking/_booking"
+            @import "./heading/_footer"
+            @import "./contact/_section"
+            @import "../components/modal/_modal"
+
+@media screen and ( max-width: 1075px )
+    html
+        body
+            background-size: auto 120vh
+            background-position-x: -140px

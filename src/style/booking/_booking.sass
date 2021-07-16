@@ -1,0 +1,75 @@
+.booking
+    background-color: rgba($white, 0.8)
+    width: 546px
+    max-width: calc(100% - 30px)
+    margin: 15px
+    display: inline-block
+    margin-bottom: 65px
+
+    .heading
+        background-color: transparent
+        color: black
+        font-size: 22px
+        font-family: $content
+        padding: 20px 0px 0px 0px
+        margin-bottom: 5px
+
+    .column
+        display: inline-block
+        vertical-align: middle
+        margin: 15px
+        font-family: $content
+        max-width: calc(100% - 30px)
+
+        .column_entry
+            display: block
+            margin: 15px 0px
+
+        &:nth-child(3)
+            text-align: left
+
+        .time_select, .duration_select
+            border-radius: 0px
+            outline: none
+            padding: 5px
+            font-size: 22px
+            background-color: $white
+            width: 60px
+
+        label
+            font-size: 22px
+
+        .sub_heading
+            margin-bottom: 5px
+            color: $dark
+
+        .react-calendar
+            .react-calendar__tile--now
+                background-color: $light
+
+            .react-calendar__tile--active
+                background-color: $dark
+
+            abbr
+                text-decoration: none
+
+    .booking_button
+        background-color: $dark
+        color: $white
+        border-radius: 0px
+        border: none
+        outline: none
+        padding: 10px
+        font-size: 22px
+        width: 512px
+        max-width: calc(100% - 30px)
+        margin: 15px
+        cursor: pointer
+
+@media screen and ( max-width: 576px )
+    .booking
+        .column
+            .column_entry
+                display: inline-block
+                margin: 0px 15px
+    
