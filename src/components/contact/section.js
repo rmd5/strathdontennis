@@ -13,7 +13,7 @@ function Section(props) {
                             <div className="contact_name">Lorna Eddie</div>
                             <div className="contact_reason">To book the court</div>
                         </td>
-                        <td><div className="contact_number">01975 651259</div></td>
+                        <td><div className="contact_number">019756 51259</div></td>
                     </tr>
                 </tbody>
             </table>
@@ -25,7 +25,7 @@ function Section(props) {
                             <div className="contact_name">Spar Shop</div>
                             <div className="contact_reason">To book the court</div>
                         </td>
-                        <td><div className="contact_number">01975 651211</div></td>
+                        <td><div className="contact_number">019756 51211</div></td>
                     </tr>
                 </tbody>
             </table>
