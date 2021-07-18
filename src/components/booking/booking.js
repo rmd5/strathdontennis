@@ -18,7 +18,6 @@ function Booking(props) {
     const [duration, setDuration] = useState(1)
     const [bookings, setBookings] = useState([])
     const [minDate, setMinDate] = useState(new Date())
-    const [available, setAvailable] = useState(true)
 
     useEffect(() => {
         axios.get(process.env.REACT_APP_API_URL + "/get_all_bookings")
@@ -77,10 +76,6 @@ function Booking(props) {
             setDuration(1)
         }
     }
-
-    useEffect(() => {
-        console.log(duration)
-    }, [duration])
 
     return (
         <div className="booking">
