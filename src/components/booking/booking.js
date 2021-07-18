@@ -18,6 +18,7 @@ function Booking(props) {
     const [duration, setDuration] = useState(1)
     const [bookings, setBookings] = useState([])
     const [minDate, setMinDate] = useState(new Date())
+    const [available, setAvailable] = useState(true)
 
     useEffect(() => {
         axios.get(process.env.REACT_APP_API_URL + "/get_all_bookings")
@@ -39,6 +40,10 @@ function Booking(props) {
         setDateTime(date_merge + time)
         findNextFree(date_merge + time)
     }, [date, time, bookings])
+
+    useEffect(() => {
+        checkAvailable()
+    }, [dateTime])
 
     function findNextFree(datetime) {
         if(bookings.includes(datetime)) {
@@ -66,6 +71,16 @@ function Booking(props) {
             toggle_modal("booking_success")
         }
     }
+
+    function checkAvailable() {
+        if(bookings.includes(Date.parse(dateTime).addHours(1).toISOString())) {
+            setDuration(1)
+        }
+    }
+
+    useEffect(() => {
+        console.log(duration)
+    }, [duration])
 
     return (
         <div className="booking">
@@ -106,9 +121,9 @@ function Booking(props) {
                 <div className="column_entry">
                     <div className="sub_heading">For how long?</div>
 
-                    <select className="duration_select" onChange={e => setDuration(e.currentTarget.value)}>
+                    <select value={duration} className="duration_select" onChange={e => setDuration(e.currentTarget.value)}>
                         <option value={1}>1 hour</option>
-                        <option value={2}>2 hours</option>
+                        <option value={2} disabled={bookings.includes(Date.parse(dateTime).addHours(1).toISOString())}>2 hours</option>
                     </select>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 .date_range
-    border: 1px solid $light
+    border: 1px solid black
     width: 250px
     display: inline-block
     border-radius: 20px
@@ -7,11 +7,12 @@
 
     .month
         background-color: $light
-        color: $dark
+        color: black
         padding: 10px
+        border-bottom: 1px solid black
 
     .day
-        color: $dark
+        color: black
         font-size: 70px
 
         .th
@@ -21,7 +22,7 @@
             padding-top: 12px
 
     .time_range
-        border: 1px solid $light
+        border: 1px solid black
         margin: -1px
         position: relative
         overflow: hidden
@@ -30,22 +31,25 @@
             display: inline-block
             vertical-align: middle
             background-color: $light
-            color: $dark
+            color: black
             width: calc(50% - 20px)
             padding: 10px
+            // border: 1px solid black
 
         .arrow_time
             background-color: $light
-            width: 35px
-            height: 35px
+            width: 30px
+            height: 30px
             position: absolute
             transform: translate(-50%, -50%) rotate(45deg)
             top: 50%
             left: 50%
+            border-top: 1px solid black
+            border-right: 1px solid black
 
         .second_time
             display: inline-block
             vertical-align: middle
-            color: $dark
+            color: black
             width: calc(50% - 20px)
             padding: 10px
