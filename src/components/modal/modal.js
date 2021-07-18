@@ -8,7 +8,7 @@ class MODAL extends React.Component {
             if (this.props.auto) {
                 let modalContent = document.getElementById(this.props.id + "_content");
                 if (modalContent) {
-                    modalContent.style.transform = "translate(0%, 0%)";
+                    modalContent.style.transform = "translate(-50%, -100%)";
                 }
             }
         }.bind(this), 100);
@@ -33,7 +33,6 @@ class MODAL extends React.Component {
                     </div>
                     <div className="spacing"></div>
                     <div className="modalCenter">
-                        <div className="spacing-2"></div>
                         {this.props.children}
                         <div className="spacing-2"></div>
                     </div>

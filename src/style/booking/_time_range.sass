@@ -1,0 +1,51 @@
+.date_range
+    border: 1px solid $light
+    width: 250px
+    display: inline-block
+    border-radius: 20px
+    overflow: hidden
+
+    .month
+        background-color: $light
+        color: $dark
+        padding: 10px
+
+    .day
+        color: $dark
+        font-size: 70px
+
+        .th
+            display: inline-block
+            vertical-align: top
+            font-size: 18px
+            padding-top: 12px
+
+    .time_range
+        border: 1px solid $light
+        margin: -1px
+        position: relative
+        overflow: hidden
+
+        .first_time
+            display: inline-block
+            vertical-align: middle
+            background-color: $light
+            color: $dark
+            width: calc(50% - 20px)
+            padding: 10px
+
+        .arrow_time
+            background-color: $light
+            width: 35px
+            height: 35px
+            position: absolute
+            transform: translate(-50%, -50%) rotate(45deg)
+            top: 50%
+            left: 50%
+
+        .second_time
+            display: inline-block
+            vertical-align: middle
+            color: $dark
+            width: calc(50% - 20px)
+            padding: 10px

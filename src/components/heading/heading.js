@@ -1,25 +1,25 @@
 import React from 'react';
 import history from '../../history';
-import MODAL from "../modal/modal"
+import MENU from "../menu/menu"
 
 import ball from "../../img/ball.png"
 
 import * as Icon from "react-bootstrap-icons"
-import MODAL_BUTTON from '../modal/modal_button';
-import toggle_modal from '../modal/toggle_modal';
+import MENU_BUTTON from '../menu/menu_button';
+import toggle_menu from '../menu/toggle_menu';
 
 function Heading(props) {
     return (
         <div className="heading">
-            <div className="logo">
+            <div className="logo" onClick={() => history.push("/")}>
                 StrathdonTennis<img className="ball" src={ball} alt="dot"></img>net
             </div>
 
 
             <div className="burger">
-                <MODAL_BUTTON id="menu">
+                <MENU_BUTTON id="menu">
                     <Icon.List />
-                </MODAL_BUTTON>
+                </MENU_BUTTON>
             </div>
 
 
@@ -38,9 +38,9 @@ function Heading(props) {
                 </div>
             </div>
 
-            <MODAL id="menu">
+            <MENU id="menu">
                 <div className={window.location.pathname === "/" ? "link active" : "link"} onClick={() => {
-                    toggle_modal("menu")
+                    toggle_menu("menu")
                     setTimeout(() => {
                         history.push("/")
                     }, 100)
@@ -48,7 +48,7 @@ function Heading(props) {
                     Book
                 </div>
                 <div className={window.location.pathname === "/contact" ? "link active" : "link"} onClick={() => {
-                    toggle_modal("menu")
+                    toggle_menu("menu")
                     setTimeout(() => {
                         history.push("/contact")
                     }, 100)
@@ -56,7 +56,7 @@ function Heading(props) {
                     Contact
                 </div>
                 <div className={window.location.pathname === "/location" ? "link active" : "link"} onClick={() => {
-                    toggle_modal("menu")
+                    toggle_menu("menu")
                     setTimeout(() => {
                         history.push("/location")
                     }, 100)
@@ -67,7 +67,7 @@ function Heading(props) {
                 <div className="link" onClick={() => window.open("https://www.justgiving.com/crowdfunding/john-morris-4?utm_term=RBq5R9jk8", '_blank')}>
                     Donate <span style={{ fontSize: "18px" }}><Icon.BoxArrowUpRight /></span>
                 </div>
-            </MODAL>
+            </MENU>
         </div>
     );
 }

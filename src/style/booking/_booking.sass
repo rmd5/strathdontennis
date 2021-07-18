@@ -1,6 +1,6 @@
 .booking
     background-color: rgba($white, 0.8)
-    width: 546px
+    width: 518px
     max-width: calc(100% - 30px)
     margin: 15px
     display: inline-block
@@ -12,7 +12,16 @@
         font-size: 22px
         font-family: $content
         padding: 20px 0px 0px 0px
-        margin-bottom: 5px
+        margin-bottom: 15px
+
+    .name_input
+        border-radius: 0px
+        border: 1px solid rgb(133, 133, 133)
+        outline: none
+        padding: 10px
+        font-size: 22px
+        background-color: $white
+        width: calc(100% - 52px)
 
     .column
         display: inline-block
@@ -20,6 +29,7 @@
         margin: 15px
         font-family: $content
         max-width: calc(100% - 30px)
+        text-align: center
 
         .column_entry
             display: block
@@ -34,7 +44,7 @@
             padding: 5px
             font-size: 22px
             background-color: $white
-            width: 60px
+            width: 100%
 
         label
             font-size: 22px
@@ -64,6 +74,7 @@
         width: 512px
         max-width: calc(100% - 30px)
         margin: 15px
+        margin-top: 0px
         cursor: pointer
 
 @media screen and ( max-width: 576px )
@@ -72,4 +83,3 @@
             .column_entry
                 display: inline-block
                 margin: 0px 15px
-    
